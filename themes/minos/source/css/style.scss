@@ -1,5 +1,8 @@
-$family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
-$family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
+@font-face { font-family: 'Binggrae-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Handon3gyeopsal300g'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.2/Handon3gyeopsal300g.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+$family-serif: 'Binggrae-Bold', "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
+$family-mono: "Source Code Pro", 'Handon3gyeopsal300g', monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
 body, button, input, select, textarea {
