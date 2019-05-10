@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>카테고리: javascript30 - Gimso2x`s Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+
+
+
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Gimso2x`s Blog">
+<meta property="og:url" content="https://gimso2x.github.io/categories/javascript/javascript30/index.html">
+<meta property="og:site_name" content="Gimso2x`s Blog">
+<meta property="og:locale" content="ko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gimso2x`s Blog">
+
+
+
+
+
+<link rel="icon" href="/images/logo_blue.ico">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139079868-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139079868-1');
+</script>
+
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    Gimso2x`s Blog
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories/">Categories</a>
+            
+            <a class="navbar-item " href="/tags">Tags</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="검색" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/gimso2x">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section section-heading">
+    <div class="container">
+        <div class="content">
+            <h5><i class="far fa-folder"></i>javascript30</h5>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/02/javascript/javascript30/js35-s06/" itemprop="url">JavaScript30_section6</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-02T02:44:53.000Z" itemprop="datePublished">5월 2 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Ajax-Type-Ahead"><a href="#Ajax-Type-Ahead" class="headerlink" title="Ajax Type Ahead"></a>Ajax Type Ahead</h4><ol>
+<li>script<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//json 주소 endpoint에 담기</span></span><br><span class="line"><span class="hljs-keyword">const</span> endpoint =</span><br><span class="line">  <span class="hljs-string">"https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> cities = [];</span><br><span class="line"><span class="hljs-comment">//fetch api로 json data cities 배열에 넣기</span></span><br><span class="line">fetch(endpoint)</span><br><span class="line">  .then(<span class="hljs-function"><span class="hljs-params">blob</span> =&gt;</span> blob.json())</span><br><span class="line">  .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> cities.push(...data));</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// input에 입력된 단어 정규식으로 변환, 대소문자 관계없이(gi)</span></span><br><span class="line"><span class="hljs-comment">// cities 데이터중에 city와 매치되면 city를 state가 매치되면 state를 반환</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findMatches</span>(<span class="hljs-params">wordToMatch, cities</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> cities.filter(<span class="hljs-function"><span class="hljs-params">place</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(wordToMatch, <span class="hljs-string">"gi"</span>);</span><br><span class="line">    <span class="hljs-keyword">return</span> place.city.match(regex) || place.state.match(regex);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//x 인자 3자리마다 콤마 삽입</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">numberWithCommas</span>(<span class="hljs-params">x</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> x.toString().replace(<span class="hljs-regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>, <span class="hljs-string">','</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">displayMatch</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">//findMatches 함수에서 매치되서 반환된 값</span></span><br><span class="line">  <span class="hljs-keyword">const</span> matchArray = findMatches(<span class="hljs-keyword">this</span>.value, cities);</span><br><span class="line">  <span class="hljs-comment">//반환된값 배열 map 돌려서 city, state에 각각 매치된 부분에 span.hl을 감싼다</span></span><br><span class="line">  <span class="hljs-keyword">const</span> html = matchArray.map(<span class="hljs-function"><span class="hljs-params">place</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-keyword">this</span>.value, <span class="hljs-string">'gi'</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> cityname = place.city.replace(regex, <span class="hljs-string">`&lt;span class="hl"&gt;<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.value&#125;</span>&lt;/span&gt;`</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> statename = place.state.replace(regex, <span class="hljs-string">`&lt;span class="hl"&gt;<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.value&#125;</span>&lt;/span&gt;`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">//감싸고 li 부분 리턴</span></span><br><span class="line">    <span class="hljs-comment">//인구부분은 위에 정의한 함수로 3자리마다 , 추가</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">      &lt;li&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;span class="name"&gt;<span class="hljs-subst">$&#123;cityname&#125;</span>, <span class="hljs-subst">$&#123;statename&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;span class="population"&gt;<span class="hljs-subst">$&#123;numberWithCommas(place.population)&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;/li&gt;</span></span><br><span class="line"><span class="hljs-string">    `</span>;</span><br><span class="line">  &#125;).join(<span class="hljs-string">''</span>); <span class="hljs-comment">// map으로 나온 결과값들을 join으로 하나의 문자열로 변환</span></span><br><span class="line">  <span class="hljs-comment">// 클래스 suggestions 안에 html형식으로 넣는다</span></span><br><span class="line">  suggestions.innerHTML = html;</span><br><span class="line">  <span class="hljs-comment">// console.log(matchArray);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> serchInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.search'</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> suggestions = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.suggestions'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//serchInput input 에 change, keyup이 작동될 때 displayMatch 함수 동작</span></span><br><span class="line">serchInput.addEventListener(<span class="hljs-string">'change'</span>, displayMatch);</span><br><span class="line">serchInput.addEventListener(<span class="hljs-string">'keyup'</span>, displayMatch);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/02/javascript/javascript30/js34-s05/" itemprop="url">JavaScript30_section5</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-02T01:44:53.000Z" itemprop="datePublished">5월 2 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Flex-Panels-Image-Gallery"><a href="#Flex-Panels-Image-Gallery" class="headerlink" title="Flex Panels Image Gallery"></a>Flex Panels Image Gallery</h4><ol>
+<li><p>css 부분</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.panels</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;</span><br><span class="line">  <span class="hljs-attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="hljs-comment">/* flex 초기 설정 */</span></span><br><span class="line">  <span class="hljs-attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.panel</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">background</span>: <span class="hljs-number">#6B0F9C</span>;</span><br><span class="line">  <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-built_in">rgba</span>(255,255,255,0.1);</span><br><span class="line">  <span class="hljs-attribute">color</span>: white;</span><br><span class="line">  <span class="hljs-attribute">text-align</span>: center;</span><br><span class="line">  <span class="hljs-attribute">align-items</span>: center;</span><br><span class="line">  <span class="hljs-comment">/* Safari transitionend event.propertyName === flex */</span></span><br><span class="line">  <span class="hljs-comment">/* Chrome + FF transitionend event.propertyName === flex-grow */</span></span><br><span class="line">  <span class="hljs-attribute">transition</span>:</span><br><span class="line">    font-size <span class="hljs-number">0.7s</span> <span class="hljs-built_in">cubic-bezier</span>(0.61,-0.19, 0.7,-0.11),</span><br><span class="line">    flex <span class="hljs-number">0.7s</span> <span class="hljs-built_in">cubic-bezier</span>(0.61,-0.19, 0.7,-0.11),</span><br><span class="line">    background <span class="hljs-number">0.2s</span>;</span><br><span class="line">  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">20px</span>;</span><br><span class="line">  <span class="hljs-attribute">background-size</span>: cover;</span><br><span class="line">  <span class="hljs-attribute">background-position</span>: center;</span><br><span class="line">  <span class="hljs-comment">/* panel flex 지정, flex 방향 지정*/</span></span><br><span class="line">  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;</span><br><span class="line">  <span class="hljs-attribute">justify-content</span>: center;</span><br><span class="line">  <span class="hljs-attribute">align-items</span>: center;</span><br><span class="line">  <span class="hljs-attribute">display</span>: flex;</span><br><span class="line">  <span class="hljs-attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* Flex Children */</span></span><br><span class="line"><span class="hljs-selector-class">.panel</span> &gt; * &#123;</span><br><span class="line">  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;</span><br><span class="line">  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.5s</span>;</span><br><span class="line">  <span class="hljs-comment">/* flex 안 컨텐츠 정렬 */</span></span><br><span class="line">  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;</span><br><span class="line">  <span class="hljs-attribute">display</span>: flex;</span><br><span class="line">  <span class="hljs-attribute">justify-content</span>: center;</span><br><span class="line">  <span class="hljs-attribute">align-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/* 패널 안 상단, 하단 text 초기 위치 화면 밖으로</span></span><br><span class="line"><span class="hljs-comment">    open-active 클래스 적용될 때 보이기 */</span></span><br><span class="line"><span class="hljs-selector-class">.panel</span> &gt; *<span class="hljs-selector-pseudo">:first-child</span> &#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-100%)&#125;</span><br><span class="line"><span class="hljs-selector-class">.panel</span><span class="hljs-selector-class">.open-active</span> &gt; *<span class="hljs-selector-pseudo">:first-child</span> &#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(0)&#125;</span><br><span class="line"><span class="hljs-selector-class">.panel</span> &gt; *<span class="hljs-selector-pseudo">:last-child</span> &#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(100%)&#125;</span><br><span class="line"><span class="hljs-selector-class">.panel</span><span class="hljs-selector-class">.open-active</span> &gt; *<span class="hljs-selector-pseudo">:last-child</span> &#123;<span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(0)&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-class">.panel</span><span class="hljs-selector-class">.open</span> &#123;</span><br><span class="line">  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">40px</span>;</span><br><span class="line">  <span class="hljs-comment">/* open 클래스 됬을때 flex크기 늘리기 */</span></span><br><span class="line">  <span class="hljs-attribute">flex</span>: <span class="hljs-number">5</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>script 부분</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// panel 클래스 다중 선택해서 변수 PANELS에 담음</span></span><br><span class="line"><span class="hljs-keyword">const</span> PANELS = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.panel'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//class open 토글 function</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleOpen</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'open'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//panel들 중에 transitionend가 작동된 패널에서 propertyname이 flex일 경우 open-active 클래스 토글</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleActive</span>(<span class="hljs-params">e</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(e.propertyName);</span><br><span class="line">  <span class="hljs-keyword">if</span>(e.propertyName.includes(<span class="hljs-string">'flex'</span>)) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'open-active'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//forEach 문</span></span><br><span class="line">PANELS.forEach(<span class="hljs-function"><span class="hljs-params">panel</span> =&gt;</span> panel.addEventListener(<span class="hljs-string">'click'</span>, toggleOpen));</span><br><span class="line">PANELS.forEach(<span class="hljs-function"><span class="hljs-params">panel</span> =&gt;</span> panel.addEventListener(<span class="hljs-string">'transitionend'</span>,toggleActive));</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/02/javascript/javascript30/js33-s04/" itemprop="url">JavaScript30_section4</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-02T00:44:53.000Z" itemprop="datePublished">5월 2 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Array-Cardio-Day-1"><a href="#Array-Cardio-Day-1" class="headerlink" title="Array Cardio Day 1"></a>Array Cardio Day 1</h4><ol>
+<li><p>filter</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// filter - 주어진 조건을 통과하는 요소를 모아 새로운 배열로 반환(1500년대 출생)</span></span><br><span class="line"><span class="hljs-keyword">const</span> fiften = inventors.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">inventor</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span>(inventor.year &gt; <span class="hljs-number">1500</span> &amp;&amp; inventor.year &lt; <span class="hljs-number">1600</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(fiften);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>map</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// map - 배열내의 모든요소 각각에 주어진 함수를 호출한 결과를 모아 새로운 배열 반환(first name과 last name 붙여서 호출)</span></span><br><span class="line"><span class="hljs-keyword">const</span> FULLNAME = inventors.map(<span class="hljs-function"><span class="hljs-params">inventor</span> =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">$&#123;inventor.first&#125;</span> <span class="hljs-subst">$&#123;inventor.last&#125;</span>`</span>)</span><br><span class="line"><span class="hljs-built_in">console</span>.log(FULLNAME);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sort</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// sort - 배열내에서 조건식에 따라 비교하고 0보다 작을경우와 0보다 클경우로 오는 순서 재배열</span></span><br><span class="line"><span class="hljs-keyword">const</span> ORDERED = inventors.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a.year &gt; b.year ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.table(ORDERED);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>reduce</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// reduce - 배열.reduce((누적값, 현잿값, 인덱스, 요소) =&gt; &#123; return 결과 &#125;, 초깃값);</span></span><br><span class="line"><span class="hljs-keyword">const</span> TOTALYERS = inventors.reduce(<span class="hljs-function">(<span class="hljs-params">total, inventor</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> total +  (inventor.passed - inventor.year);</span><br><span class="line">&#125;, <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(TOTALYERS);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/04/25/javascript/javascript30/js32-s03/" itemprop="url">JavaScript30_section3</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-25T09:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Playing-width-CSS-Variables-and-JS"><a href="#Playing-width-CSS-Variables-and-JS" class="headerlink" title="Playing width CSS Variables and JS"></a>Playing width CSS Variables and JS</h4><ol>
+<li><p>css 추가요소</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */</span></span><br><span class="line"><span class="hljs-selector-pseudo">:root</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">--base</span>: <span class="hljs-number">#ffc600</span>;</span><br><span class="line"> <span class="hljs-attribute">--spacing</span>: <span class="hljs-number">10px</span>;</span><br><span class="line"> <span class="hljs-attribute">--blur</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">  var(css변수) - IE지원 X, 위에서 정의한 css 변수 사용</span></span><br><span class="line"><span class="hljs-comment">  스크립트로 :root 요소를 변경할경우에 변수로 정한값이 변경되면서 자동변경</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-selector-tag">img</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">var</span>(--spacing);</span><br><span class="line"> <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--base);</span><br><span class="line"> <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">blur</span>(var(--blur));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>javascript 추가요소</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//변수 inputs에 ".controls input"를 담는다.</span></span><br><span class="line"><span class="hljs-keyword">const</span> inputs = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".controls input"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//suffix 변수에 input에 data-sizing 속성이 있을경우 그 값(ex: px)을 담고 아닐경우 Null 담는다</span></span><br><span class="line"><span class="hljs-comment">//document.documentElement = 루트요소 HTML의 root는 &lt;html&gt;</span></span><br><span class="line"><span class="hljs-comment">//루트요소에 속성 셋팅, 해당 input name속성에 값은 input value와 suffix에 담은 단위</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleUpdate</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> suffix = <span class="hljs-keyword">this</span>.dataset.sizing || <span class="hljs-string">''</span>;</span><br><span class="line">  <span class="hljs-built_in">document</span>.documentElement.style.setProperty(<span class="hljs-string">`--<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>, <span class="hljs-keyword">this</span>.value + suffix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//inputs foreach문 돌려서 input의 range나, color 속성이 변경되거나 마우스이동이 되었을 경우</span></span><br><span class="line"><span class="hljs-comment">//위에서 정의한 handleUpdate 기능 동작</span></span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'change'</span>, handleUpdate));</span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'mousemove'</span>, handleUpdate));</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/04/25/javascript/javascript30/js31-s02/" itemprop="url">JavaScript30_section2</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-25T07:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="CSS-JS-Clock"><a href="#CSS-JS-Clock" class="headerlink" title="CSS + JS Clock"></a>CSS + JS Clock</h4><ol>
+<li><p>css 추가</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* css transform: rotate() 각도에 따라 회전 */</span></span><br><span class="line"><span class="hljs-selector-tag">transform</span>: <span class="hljs-selector-tag">rotate</span>(330<span class="hljs-selector-tag">deg</span>);</span><br><span class="line"><span class="hljs-comment">/* transform 기준점 0% ~ 100% 선 기준으로 0 왼쪽 끝, 100% 오른쪽 끝 */</span></span><br><span class="line"><span class="hljs-selector-tag">transform-origin</span>: 100%;</span><br><span class="line"><span class="hljs-comment">/* css 속성 변경할때 애니메이션 속도 조정 */</span></span><br><span class="line"><span class="hljs-selector-tag">transition</span>: <span class="hljs-selector-tag">all</span> 0<span class="hljs-selector-class">.05s</span>;</span><br><span class="line"><span class="hljs-comment">/* 전환효과의 속도 곡선 지정, 여기선 시계바늘 반동역할 */</span></span><br><span class="line"><span class="hljs-selector-tag">transition-timing-function</span>: <span class="hljs-selector-tag">cubic-bezier</span>(0<span class="hljs-selector-class">.1</span>, 2<span class="hljs-selector-class">.7</span>, 0<span class="hljs-selector-class">.58</span>, 1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>시계바늘 function</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> secondHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.second-hand'</span>); <span class="hljs-comment">//secondHand 변수 지정</span></span><br><span class="line"><span class="hljs-keyword">const</span> minHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.min-hand'</span>); <span class="hljs-comment">//minHand 변수 지정</span></span><br><span class="line"><span class="hljs-keyword">const</span> hourHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.hour-hand'</span>); <span class="hljs-comment">//hourHand 변수 지정</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setDate</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">//now 변수에 Date 객체 지정(현재 시간, 날짜)</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> seconds = now.getSeconds(); <span class="hljs-comment">//now에서 현재 초를 설정</span></span><br><span class="line">  <span class="hljs-comment">//now에서 현재 초에서 최대 초인 60을 나눈후 360을 곱한후</span></span><br><span class="line">  <span class="hljs-comment">//기본바늘이 각도가 -90도인 상태이므로 90도를 더함 이하 분, 시간 동일</span></span><br><span class="line">  <span class="hljs-keyword">const</span> secondsDegrees = ((seconds / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  secondHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;secondsDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> mins = now.getMinutes();</span><br><span class="line">  <span class="hljs-keyword">const</span> minsDegrees = ((mins / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  minHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;minsDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> hours = now.getHours();</span><br><span class="line">  <span class="hljs-keyword">const</span> hoursDegrees = ((hours / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  hourHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;hoursDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//페이지 초기로드시 function 작동</span></span><br><span class="line">setDate();</span><br><span class="line"><span class="hljs-comment">//1초마다 setDate function 작동으로 시계바늘 이동</span></span><br><span class="line">setInterval(setDate, <span class="hljs-number">1000</span>);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/04/25/javascript/javascript30/js30-s01/" itemprop="url">JavaScript30_section1</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-25T05:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="JavaScript-Drum-Kit"><a href="#JavaScript-Drum-Kit" class="headerlink" title="JavaScript Drum Kit"></a>JavaScript Drum Kit</h4><ol>
+<li><code>&lt;kdb&gt;&lt;/kdb&gt;</code> - 키보드 입력을 정의하는 HTML 태그</li>
+<li><p>템플릿 리터럴은 내장된 표현식을 허용하는 문자열 리터럴입니다. 여러 줄로 이뤄진 문자열과 문자 보간기능을 사용할 수 있습니다. 이전 버전의 ES2015사양 명세에서는 “template strings” (템플릿 문자열) 라고 불려 왔습니다.<br>템플릿 리터럴은 이중 따옴표 나 작은 따옴표 대신 백틱(<code></code>)을 이용합니다.</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> a = <span class="hljs-number">5</span>;</span><br><span class="line"><span class="hljs-keyword">var</span> b = <span class="hljs-number">10</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Fifteen is <span class="hljs-subst">$&#123;a + b&#125;</span> and</span></span><br><span class="line"><span class="hljs-string">not <span class="hljs-subst">$&#123;<span class="hljs-number">2</span> * a + b&#125;</span>.`</span>);</span><br><span class="line"><span class="hljs-comment">// "Fifteen is 15 and</span></span><br><span class="line"><span class="hljs-comment">// not 20."</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>재생 동작 function</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">playSound</span>(<span class="hljs-params">e</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">// audio 태그중에 속성이 data-key가 keydown 이벤트가 발생된 값을 가진 태그를 담는다</span></span><br><span class="line">  <span class="hljs-keyword">const</span> audio = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">`audio[data-key="<span class="hljs-subst">$&#123;e.keyCode&#125;</span>"`</span>);</span><br><span class="line">  <span class="hljs-comment">// class가 key를 가진 태그중에 속성이 data-key가 keydown 이벤트가 발생된 값을 가진 태그를 담는다</span></span><br><span class="line">  <span class="hljs-keyword">const</span> key = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">`.key[data-key="<span class="hljs-subst">$&#123;e.keyCode&#125;</span>"`</span>);</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">//audio태그가 비었을 때 함수동작 멈춤</span></span><br><span class="line">  <span class="hljs-keyword">if</span>(!audio) <span class="hljs-keyword">return</span>;</span><br><span class="line">  <span class="hljs-comment">//audio태그 파일 재생지점 0 셋팅</span></span><br><span class="line">  audio.currentTime = <span class="hljs-number">0</span>;</span><br><span class="line">  <span class="hljs-comment">//audio태그 재생</span></span><br><span class="line">  audio.play();</span><br><span class="line"></span><br><span class="line">  <span class="hljs-comment">//key태그에 playing class 추가</span></span><br><span class="line">  key.classList.add(<span class="hljs-string">'playing'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>transition 끝난후 class 제거 function</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">removeTransition</span>(<span class="hljs-params">e</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">//이 function안에 들어왔을때 element요소의 propertyName이 transform 이 아닐경우 함수동작 멈춤</span></span><br><span class="line">  <span class="hljs-keyword">if</span> (e.propertyName !== <span class="hljs-string">'transform'</span>) <span class="hljs-keyword">return</span>;</span><br><span class="line">  <span class="hljs-comment">//this = keys , keys에 담긴 태그들에에서 playing class 제거</span></span><br><span class="line">  <span class="hljs-keyword">this</span>.classList.remove(<span class="hljs-string">'playing'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>기본 동작</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//keys 라는 변수에 key라는 class를 가진 모든 태그를 담는다</span></span><br><span class="line"><span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.key'</span>);</span><br><span class="line"><span class="hljs-comment">//keys 변수 forEach문을 돌려 'transitionend' 동작이 실행되었을때 removeTransition function 을 실행</span></span><br><span class="line">keys.forEach(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> key.addEventListener(<span class="hljs-string">'transitionend'</span>, removeTransition));</span><br><span class="line"><span class="hljs-comment">//'keydown' 이벤트가 실행되었을 때 playSound function을 실행</span></span><br><span class="line"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'keydown'</span>, playSound);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+    
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2019 Seonggwan Kim&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/gimso2x">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("ko");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+      })
+    </script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="아무거나 입력하세요">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '글',
+                PAGES: '페이지',
+                CATEGORIES: '카테고리 목록',
+                TAGS: '태그 목록',
+                UNTITLED: '(제목없음)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
