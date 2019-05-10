@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>JavaScript30_section2 - Gimso2x`s Blog</title>
+<title>JavaScript30_section3 - Gimso2x`s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -14,19 +14,19 @@
 
 
 
-    <meta name="description" content="CSS + JS Clock css 추가 12345678/* css transform: rotate() 각도에 따라 회전 */transform: rotate(330deg);/* transform 기준점 0% ~ 100% 선 기준으로 0 왼쪽 끝, 100% 오른쪽 끝 */transform-origin: 100%;/* css 속성 변경할때 애니메이션 속도 조정">
+    <meta name="description" content="Playing width CSS Variables and JS css 추가요소 123456789101112131415/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */:root &amp;#123; --base: #ffc600; --spacing: 10px; --blur: 10px;&amp;#125;/*  var(css변수) - IE지원">
 <meta name="keywords" content="javascript,javascript30">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript30_section2">
-<meta property="og:url" content="https://gimso2x.github.io/2019/04/25/javascript/javascript30/js31-s02/index.html">
+<meta property="og:title" content="JavaScript30_section3">
+<meta property="og:url" content="https://gimso2x.github.io/2019/04/25/javascript/javascript30/js30-s03/index.html">
 <meta property="og:site_name" content="Gimso2x`s Blog">
-<meta property="og:description" content="CSS + JS Clock css 추가 12345678/* css transform: rotate() 각도에 따라 회전 */transform: rotate(330deg);/* transform 기준점 0% ~ 100% 선 기준으로 0 왼쪽 끝, 100% 오른쪽 끝 */transform-origin: 100%;/* css 속성 변경할때 애니메이션 속도 조정">
+<meta property="og:description" content="Playing width CSS Variables and JS css 추가요소 123456789101112131415/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */:root &amp;#123; --base: #ffc600; --spacing: 10px; --blur: 10px;&amp;#125;/*  var(css변수) - IE지원">
 <meta property="og:locale" content="ko">
 <meta property="og:image" content="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png">
-<meta property="og:updated_time" content="2019-05-10T04:22:23.599Z">
+<meta property="og:updated_time" content="2019-05-10T05:44:43.556Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript30_section2">
-<meta name="twitter:description" content="CSS + JS Clock css 추가 12345678/* css transform: rotate() 각도에 따라 회전 */transform: rotate(330deg);/* transform 기준점 0% ~ 100% 선 기준으로 0 왼쪽 끝, 100% 오른쪽 끝 */transform-origin: 100%;/* css 속성 변경할때 애니메이션 속도 조정">
+<meta name="twitter:title" content="JavaScript30_section3">
+<meta name="twitter:description" content="Playing width CSS Variables and JS css 추가요소 123456789101112131415/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */:root &amp;#123; --base: #ffc600; --spacing: 10px; --blur: 10px;&amp;#125;/*  var(css변수) - IE지원">
 <meta name="twitter:image" content="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png">
 
 
@@ -128,12 +128,12 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            JavaScript30_section2
+            JavaScript30_section3
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
-            <time datetime="2019-04-25T07:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
+            <time datetime="2019-04-25T09:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
         </span>
         
         <span class="column is-narrow article-category">
@@ -146,12 +146,12 @@
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
-<h4 id="CSS-JS-Clock"><a href="#CSS-JS-Clock" class="headerlink" title="CSS + JS Clock"></a>CSS + JS Clock</h4><ol>
-<li><p>css 추가</p>
-<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* css transform: rotate() 각도에 따라 회전 */</span></span><br><span class="line"><span class="hljs-selector-tag">transform</span>: <span class="hljs-selector-tag">rotate</span>(330<span class="hljs-selector-tag">deg</span>);</span><br><span class="line"><span class="hljs-comment">/* transform 기준점 0% ~ 100% 선 기준으로 0 왼쪽 끝, 100% 오른쪽 끝 */</span></span><br><span class="line"><span class="hljs-selector-tag">transform-origin</span>: 100%;</span><br><span class="line"><span class="hljs-comment">/* css 속성 변경할때 애니메이션 속도 조정 */</span></span><br><span class="line"><span class="hljs-selector-tag">transition</span>: <span class="hljs-selector-tag">all</span> 0<span class="hljs-selector-class">.05s</span>;</span><br><span class="line"><span class="hljs-comment">/* 전환효과의 속도 곡선 지정, 여기선 시계바늘 반동역할 */</span></span><br><span class="line"><span class="hljs-selector-tag">transition-timing-function</span>: <span class="hljs-selector-tag">cubic-bezier</span>(0<span class="hljs-selector-class">.1</span>, 2<span class="hljs-selector-class">.7</span>, 0<span class="hljs-selector-class">.58</span>, 1);</span><br></pre></td></tr></table></figure>
+<h4 id="Playing-width-CSS-Variables-and-JS"><a href="#Playing-width-CSS-Variables-and-JS" class="headerlink" title="Playing width CSS Variables and JS"></a>Playing width CSS Variables and JS</h4><ol>
+<li><p>css 추가요소</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */</span></span><br><span class="line"><span class="hljs-selector-pseudo">:root</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">--base</span>: <span class="hljs-number">#ffc600</span>;</span><br><span class="line"> <span class="hljs-attribute">--spacing</span>: <span class="hljs-number">10px</span>;</span><br><span class="line"> <span class="hljs-attribute">--blur</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">  var(css변수) - IE지원 X, 위에서 정의한 css 변수 사용</span></span><br><span class="line"><span class="hljs-comment">  스크립트로 :root 요소를 변경할경우에 변수로 정한값이 변경되면서 자동변경</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-selector-tag">img</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">var</span>(--spacing);</span><br><span class="line"> <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--base);</span><br><span class="line"> <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">blur</span>(var(--blur));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>시계바늘 function</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> secondHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.second-hand'</span>); <span class="hljs-comment">//secondHand 변수 지정</span></span><br><span class="line"><span class="hljs-keyword">const</span> minHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.min-hand'</span>); <span class="hljs-comment">//minHand 변수 지정</span></span><br><span class="line"><span class="hljs-keyword">const</span> hourHand = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.hour-hand'</span>); <span class="hljs-comment">//hourHand 변수 지정</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setDate</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> now = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">//now 변수에 Date 객체 지정(현재 시간, 날짜)</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> seconds = now.getSeconds(); <span class="hljs-comment">//now에서 현재 초를 설정</span></span><br><span class="line">  <span class="hljs-comment">//now에서 현재 초에서 최대 초인 60을 나눈후 360을 곱한후</span></span><br><span class="line">  <span class="hljs-comment">//기본바늘이 각도가 -90도인 상태이므로 90도를 더함 이하 분, 시간 동일</span></span><br><span class="line">  <span class="hljs-keyword">const</span> secondsDegrees = ((seconds / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  secondHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;secondsDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> mins = now.getMinutes();</span><br><span class="line">  <span class="hljs-keyword">const</span> minsDegrees = ((mins / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  minHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;minsDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">  <span class="hljs-keyword">const</span> hours = now.getHours();</span><br><span class="line">  <span class="hljs-keyword">const</span> hoursDegrees = ((hours / <span class="hljs-number">60</span>) * <span class="hljs-number">360</span>) + <span class="hljs-number">90</span>;</span><br><span class="line">  hourHand.style.transform = <span class="hljs-string">`rotate(<span class="hljs-subst">$&#123;hoursDegrees&#125;</span>deg)`</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">//페이지 초기로드시 function 작동</span></span><br><span class="line">setDate();</span><br><span class="line"><span class="hljs-comment">//1초마다 setDate function 작동으로 시계바늘 이동</span></span><br><span class="line">setInterval(setDate, <span class="hljs-number">1000</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>javascript 추가요소</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//변수 inputs에 ".controls input"를 담는다.</span></span><br><span class="line"><span class="hljs-keyword">const</span> inputs = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".controls input"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//suffix 변수에 input에 data-sizing 속성이 있을경우 그 값(ex: px)을 담고 아닐경우 Null 담는다</span></span><br><span class="line"><span class="hljs-comment">//document.documentElement = 루트요소 HTML의 root는 &lt;html&gt;</span></span><br><span class="line"><span class="hljs-comment">//루트요소에 속성 셋팅, 해당 input name속성에 값은 input value와 suffix에 담은 단위</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleUpdate</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> suffix = <span class="hljs-keyword">this</span>.dataset.sizing || <span class="hljs-string">''</span>;</span><br><span class="line">  <span class="hljs-built_in">document</span>.documentElement.style.setProperty(<span class="hljs-string">`--<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>, <span class="hljs-keyword">this</span>.value + suffix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//inputs foreach문 돌려서 input의 range나, color 속성이 변경되거나 마우스이동이 되었을 경우</span></span><br><span class="line"><span class="hljs-comment">//위에서 정의한 handleUpdate 기능 동작</span></span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'change'</span>, handleUpdate));</span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'mousemove'</span>, handleUpdate));</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     
@@ -169,12 +169,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2019/04/25/javascript/javascript30/js32-s03/">JavaScript30_section3</a>
+            <a href="/2019/05/02/javascript/javascript30/js30-s04/">JavaScript30_section4</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2019/04/25/javascript/javascript30/js30-s01/">JavaScript30_section1</a>
+            <a href="/2019/04/25/javascript/javascript30/js30-s02/">JavaScript30_section2</a>
             
         </span>
     </div>
@@ -196,8 +196,8 @@
     
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://gimso2x.github.io/2019/04/25/javascript/javascript30/js31-s02/';
-        this.page.identifier = '2019/04/25/javascript/javascript30/js31-s02/';
+        this.page.url = 'https://gimso2x.github.io/2019/04/25/javascript/javascript30/js30-s03/';
+        this.page.identifier = '2019/04/25/javascript/javascript30/js30-s03/';
         
         this.language = 'ko';
         

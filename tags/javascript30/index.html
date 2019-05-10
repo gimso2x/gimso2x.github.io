@@ -129,7 +129,112 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/05/02/javascript/javascript30/js35-s06/" itemprop="url">JavaScript30_section6</a>
+            <a href="/2019/05/10/javascript/javascript30/js30-s09/" itemprop="url">JavaScript30_section9</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-10T04:44:53.000Z" itemprop="datePublished">5월 10 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Dev-Tools-Domination"><a href="#Dev-Tools-Domination" class="headerlink" title="Dev Tools Domination"></a>Dev Tools Domination</h4><ol>
+<li>script<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// Regular</span></span><br><span class="line"><span class="hljs-comment">//console.log 기본</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Interpolated</span></span><br><span class="line"><span class="hljs-comment">//console.log 변수로 값 넣음</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'hello i am a %s string!'</span>, <span class="hljs-string">'!!dd!!'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Styled</span></span><br><span class="line"><span class="hljs-comment">//console.log 스타일 지정</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">'%c I am some greate text'</span>, <span class="hljs-string">'font-size:50px;background:red;'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// warning!</span></span><br><span class="line"><span class="hljs-comment">//console warning</span></span><br><span class="line"><span class="hljs-built_in">console</span>.warn(<span class="hljs-string">'OH NOOO'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Error :|</span></span><br><span class="line"><span class="hljs-comment">//console error</span></span><br><span class="line"><span class="hljs-built_in">console</span>.error(<span class="hljs-string">'Shit'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Info</span></span><br><span class="line"><span class="hljs-built_in">console</span>.info(<span class="hljs-string">"Cr eat 3-4 people"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Testing</span></span><br><span class="line"><span class="hljs-comment">// 평가된 식이 false이면 콘솔에 오류를 기록합니다.</span></span><br><span class="line"><span class="hljs-keyword">const</span> p = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'p'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.assert(p.classList.contains(<span class="hljs-string">'ouch'</span>), <span class="hljs-string">'That is wrong!'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// clearing</span></span><br><span class="line"><span class="hljs-comment">// 콘솔을 지웁니다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.clear();</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Viewing DOM Elements</span></span><br><span class="line"><span class="hljs-built_in">console</span>.log(p);</span><br><span class="line"><span class="hljs-comment">// 지정된 객체의 자바스크립트 표현을 출력합니다. 로그 중인 객체가 HTML 요소인 경우 DOM 표현의 속성이 아래와 같이 출력됩니다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.dir(p);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.clear();</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// Grouping together</span></span><br><span class="line"><span class="hljs-comment">// foreach 문안에서 그룹 묶음 $&#123;dog.name&#125;이란 이름 지정</span></span><br><span class="line">dogs.forEach(<span class="hljs-function"><span class="hljs-params">dog</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="hljs-built_in">console</span>.group(<span class="hljs-string">`<span class="hljs-subst">$&#123;dog.name&#125;</span>`</span>);</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`This is <span class="hljs-subst">$&#123;dog.name&#125;</span>`</span>);</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;dog.name&#125;</span> is <span class="hljs-subst">$&#123;dog.age&#125;</span> years old`</span>);</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">$&#123;dog.name&#125;</span> is <span class="hljs-subst">$&#123;dog.age * <span class="hljs-number">7</span>&#125;</span> dog years old`</span>);</span><br><span class="line">	<span class="hljs-built_in">console</span>.groupEnd(<span class="hljs-string">`<span class="hljs-subst">$&#123;dog.name&#125;</span>`</span>);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// counting</span></span><br><span class="line"><span class="hljs-comment">// count()가 호출된 횟수를 동일한 줄에 동일한 레이블을 사용하여 기록합니다.</span></span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Wes'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Wes'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Wes'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Wes'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.count(<span class="hljs-string">'Steve'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// timing</span></span><br><span class="line"><span class="hljs-comment">// timeend가 날때까지 시간 기록</span></span><br><span class="line"><span class="hljs-built_in">console</span>.time(<span class="hljs-string">'fetching data'</span>);</span><br><span class="line">fetch(<span class="hljs-string">'https://api.github.com/users/wesbos'</span>)</span><br><span class="line">	.then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> data.json())</span><br><span class="line">	.then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="hljs-built_in">console</span>.timeEnd(<span class="hljs-string">'fetching data'</span>);</span><br><span class="line">	<span class="hljs-built_in">console</span>.log(data);</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/10/javascript/javascript30/js30-s08/" itemprop="url">JavaScript30_section8</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-10T03:44:53.000Z" itemprop="datePublished">5월 10 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Fun-with-HTML5-Canvas"><a href="#Fun-with-HTML5-Canvas" class="headerlink" title="Fun with HTML5 Canvas"></a>Fun with HTML5 Canvas</h4><ol>
+<li>script<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">const</span> canvas = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">"#draw"</span>);</span><br><span class="line"><span class="hljs-comment">// getContext 메소드를 사용하여 canvas 렌더링 컨텍스트와 그리기 함수들 사용</span></span><br><span class="line"><span class="hljs-keyword">const</span> ctx = canvas.getContext(<span class="hljs-string">"2d"</span>);</span><br><span class="line"><span class="hljs-comment">// canvas width, height를 window 사이즈로 지정</span></span><br><span class="line">canvas.width = <span class="hljs-built_in">window</span>.innerWidth;</span><br><span class="line">canvas.height = <span class="hljs-built_in">window</span>.innerHeight;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//ctx - canvas 2d에서 strokeStyle 색을 #BADA55로 지정</span></span><br><span class="line">ctx.strokeStyle = <span class="hljs-string">"#BADA55"</span>;</span><br><span class="line"><span class="hljs-comment">//둥근 모서리</span></span><br><span class="line">ctx.lineJoin = <span class="hljs-string">"round"</span>;</span><br><span class="line"><span class="hljs-comment">//둥근 끝이 있는 선</span></span><br><span class="line">ctx.lineCap = <span class="hljs-string">"round"</span>;</span><br><span class="line"><span class="hljs-comment">//선 두께 100</span></span><br><span class="line">ctx.lineWidth = <span class="hljs-number">100</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> isDrawing = <span class="hljs-literal">false</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> lastX = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> lastY = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> hue = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">let</span> direction = <span class="hljs-literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">draw</span>(<span class="hljs-params">e</span>) </span>&#123;</span><br><span class="line"><span class="hljs-keyword">if</span> (!isDrawing) <span class="hljs-keyword">return</span>;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(e);</span><br><span class="line"><span class="hljs-comment">//hsl(색상, 채도, 명도)</span></span><br><span class="line">ctx.strokeStyle = <span class="hljs-string">`hsl(<span class="hljs-subst">$&#123;hue&#125;</span>, 100%, 50%)`</span>;</span><br><span class="line"><span class="hljs-comment">//canvas 메소드 선그리기할때</span></span><br><span class="line">ctx.beginPath();</span><br><span class="line"><span class="hljs-comment">//mouse 눌럿을때 지정된 변수값으로 canvas 좌표 이동</span></span><br><span class="line">ctx.moveTo(lastX, lastY);</span><br><span class="line"><span class="hljs-comment">//moveTo에서 시작해서 LineTo 좌표까지 지정</span></span><br><span class="line">ctx.lineTo(e.offsetX, e.offsetY);</span><br><span class="line"><span class="hljs-comment">//stroke로 라인 생성</span></span><br><span class="line">ctx.stroke();</span><br><span class="line"><span class="hljs-comment">//마지막 좌표로 lastX, lastY 값 지정</span></span><br><span class="line">[lastX, lastY] = [e.offsetX, e.offsetY];</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//함수 작동될때마다 hue값 1씩 증가, 360이 넘어가면 0으로 초기화</span></span><br><span class="line">hue++;</span><br><span class="line"><span class="hljs-keyword">if</span> (hue &gt;= <span class="hljs-number">360</span>) &#123;</span><br><span class="line">	hue = <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// canvas 요소의 라인 두께가 100이상이거나 1이하이면 dircetion 함수 false처리</span></span><br><span class="line"><span class="hljs-keyword">if</span> (ctx.lineWidth &gt;= <span class="hljs-number">100</span> || ctx.lineWidth &lt;= <span class="hljs-number">1</span>) &#123;</span><br><span class="line">	direction = !direction;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// canvas요소 linewidth 증감, 증가 - dircetion 상태에 따라</span></span><br><span class="line"><span class="hljs-keyword">if</span> (direction) &#123;</span><br><span class="line">	ctx.lineWidth++;</span><br><span class="line">&#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">	ctx.lineWidth--;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//canvas에 mousedown 이벤트 감지될 때 해당 좌표값 변수 값 지정</span></span><br><span class="line">canvas.addEventListener(<span class="hljs-string">"mousedown"</span>, e =&gt; &#123;</span><br><span class="line">isDrawing = <span class="hljs-literal">true</span>;</span><br><span class="line">[lastX, lastY] = [e.offsetX, e.offsetY];</span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-comment">//canvas에 mousemove 이벤트 감지될 때 위에서 지정된 draw 함수 동작</span></span><br><span class="line">canvas.addEventListener(<span class="hljs-string">"mousemove"</span>, draw);</span><br><span class="line"><span class="hljs-comment">//canvas에 마우스 버튼을 눌렀다 뗄때 동작</span></span><br><span class="line">canvas.addEventListener(<span class="hljs-string">"mouseup"</span>, () =&gt; (isDrawing = <span class="hljs-literal">false</span>));</span><br><span class="line"><span class="hljs-comment">//canvas에 마우스 떠날 때 동작</span></span><br><span class="line">canvas.addEventListener(<span class="hljs-string">"mouseout"</span>, () =&gt; (isDrawing = <span class="hljs-literal">false</span>));</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/10/javascript/javascript30/js30-s07/" itemprop="url">JavaScript30_section7</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-10T02:44:53.000Z" itemprop="datePublished">5월 10 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Array-Cardio-Day-2"><a href="#Array-Cardio-Day-2" class="headerlink" title="Array Cardio Day 2"></a>Array Cardio Day 2</h4><ol>
+<li>script<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//some, 어느 하나만 해당되도 ok true 반환</span></span><br><span class="line"><span class="hljs-keyword">const</span> isAdult = people.some(<span class="hljs-function"><span class="hljs-params">person</span> =&gt;</span> ((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getFullYear()) - person.year &gt;= <span class="hljs-number">19</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(&#123;isAdult&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//every 모든게 ok true</span></span><br><span class="line"><span class="hljs-keyword">const</span> allAdult = people.every(<span class="hljs-function"><span class="hljs-params">person</span> =&gt;</span> ((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()).getFullYear()) - person.year &gt;= <span class="hljs-number">19</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(&#123;allAdult&#125;);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//조건 부합되는 find</span></span><br><span class="line"><span class="hljs-keyword">const</span> comment = comments.find(<span class="hljs-function"><span class="hljs-params">comment</span> =&gt;</span> comment.id === <span class="hljs-number">823423</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">console</span>.log(comment);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//조건 부합되는 find index 반환</span></span><br><span class="line"><span class="hljs-keyword">const</span> index = comments.findIndex(<span class="hljs-function"><span class="hljs-params">comment</span> =&gt;</span> comment.id === <span class="hljs-number">823423</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(index);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// index로 뽑아낸 항목만 삭제</span></span><br><span class="line"><span class="hljs-keyword">const</span> newComments = [</span><br><span class="line">  ...comments.slice(<span class="hljs-number">0</span>, index),</span><br><span class="line">  ...comments.slice(index + <span class="hljs-number">1</span>)</span><br><span class="line"></span><br><span class="line">];</span><br><span class="line"><span class="hljs-built_in">console</span>.log(newComments);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            <a href="/2019/05/02/javascript/javascript30/js30-s06/" itemprop="url">JavaScript30_section6</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -164,7 +269,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/05/02/javascript/javascript30/js34-s05/" itemprop="url">JavaScript30_section5</a>
+            <a href="/2019/05/02/javascript/javascript30/js30-s05/" itemprop="url">JavaScript30_section5</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -203,7 +308,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/05/02/javascript/javascript30/js33-s04/" itemprop="url">JavaScript30_section4</a>
+            <a href="/2019/05/02/javascript/javascript30/js30-s04/" itemprop="url">JavaScript30_section4</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -248,7 +353,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/04/25/javascript/javascript30/js32-s03/" itemprop="url">JavaScript30_section3</a>
+            <a href="/2019/04/25/javascript/javascript30/js30-s03/" itemprop="url">JavaScript30_section3</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -287,7 +392,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2019/04/25/javascript/javascript30/js31-s02/" itemprop="url">JavaScript30_section2</a>
+            <a href="/2019/04/25/javascript/javascript30/js30-s02/" itemprop="url">JavaScript30_section2</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
