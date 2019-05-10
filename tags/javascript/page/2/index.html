@@ -129,6 +129,45 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2019/04/25/javascript/javascript30/js30-s03/" itemprop="url">JavaScript30_section3</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-25T09:44:53.000Z" itemprop="datePublished">4월 25 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Playing-width-CSS-Variables-and-JS"><a href="#Playing-width-CSS-Variables-and-JS" class="headerlink" title="Playing width CSS Variables and JS"></a>Playing width CSS Variables and JS</h4><ol>
+<li><p>css 추가요소</p>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/* 가상화요소 :root - html에서 root 요소는 항상 html 요소 */</span></span><br><span class="line"><span class="hljs-selector-pseudo">:root</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">--base</span>: <span class="hljs-number">#ffc600</span>;</span><br><span class="line"> <span class="hljs-attribute">--spacing</span>: <span class="hljs-number">10px</span>;</span><br><span class="line"> <span class="hljs-attribute">--blur</span>: <span class="hljs-number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">/*</span></span><br><span class="line"><span class="hljs-comment">  var(css변수) - IE지원 X, 위에서 정의한 css 변수 사용</span></span><br><span class="line"><span class="hljs-comment">  스크립트로 :root 요소를 변경할경우에 변수로 정한값이 변경되면서 자동변경</span></span><br><span class="line"><span class="hljs-comment">*/</span></span><br><span class="line"><span class="hljs-selector-tag">img</span> &#123;</span><br><span class="line"> <span class="hljs-attribute">padding</span>: <span class="hljs-built_in">var</span>(--spacing);</span><br><span class="line"> <span class="hljs-attribute">background</span>: <span class="hljs-built_in">var</span>(--base);</span><br><span class="line"> <span class="hljs-attribute">filter</span>: <span class="hljs-built_in">blur</span>(var(--blur));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>javascript 추가요소</p>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//변수 inputs에 ".controls input"를 담는다.</span></span><br><span class="line"><span class="hljs-keyword">const</span> inputs = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">".controls input"</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//suffix 변수에 input에 data-sizing 속성이 있을경우 그 값(ex: px)을 담고 아닐경우 Null 담는다</span></span><br><span class="line"><span class="hljs-comment">//document.documentElement = 루트요소 HTML의 root는 &lt;html&gt;</span></span><br><span class="line"><span class="hljs-comment">//루트요소에 속성 셋팅, 해당 input name속성에 값은 input value와 suffix에 담은 단위</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">handleUpdate</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">const</span> suffix = <span class="hljs-keyword">this</span>.dataset.sizing || <span class="hljs-string">''</span>;</span><br><span class="line">  <span class="hljs-built_in">document</span>.documentElement.style.setProperty(<span class="hljs-string">`--<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.name&#125;</span>`</span>, <span class="hljs-keyword">this</span>.value + suffix);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//inputs foreach문 돌려서 input의 range나, color 속성이 변경되거나 마우스이동이 되었을 경우</span></span><br><span class="line"><span class="hljs-comment">//위에서 정의한 handleUpdate 기능 동작</span></span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'change'</span>, handleUpdate));</span><br><span class="line">inputs.forEach(<span class="hljs-function"><span class="hljs-params">input</span> =&gt;</span> input.addEventListener(<span class="hljs-string">'mousemove'</span>, handleUpdate));</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2019/04/25/javascript/javascript30/js30-s02/" itemprop="url">JavaScript30_section2</a>
         
     </h1>

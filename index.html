@@ -122,6 +122,41 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2019/05/10/javascript/javascript-object/" itemprop="url">자바스크립트 Object(객체)</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-10T09:13:51.000Z" itemprop="datePublished">5월 10 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h4 id="객체-참조"><a href="#객체-참조" class="headerlink" title="객체 참조"></a>객체 <a href="https://poiemaweb.com/js-object" target="_blank" rel="noopener">참조</a></h4><blockquote>
+<p>자바스크립트의 객체는 키(key)과 값(value)으로 구성된 프로퍼티(Property)들의 집합이다</p>
+</blockquote>
+<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">let</span> obj = &#123;</span><br><span class="line">  <span class="hljs-string">'key'</span> : value,  <span class="hljs-comment">// 합쳐서 property</span></span><br><span class="line"></span><br><span class="line">  <span class="hljs-string">'key2'</span> : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">    <span class="hljs-comment">// value가 함수일경우 일반함수와 구분하기위해 메소드</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2019/05/10/javascript/javascript30/js30-s09/" itemprop="url">JavaScript30_section9</a>
         
     </h1>
@@ -450,51 +485,6 @@
 </li>
 <li><p>script 부분</p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// panel 클래스 다중 선택해서 변수 PANELS에 담음</span></span><br><span class="line"><span class="hljs-keyword">const</span> PANELS = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'.panel'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//class open 토글 function</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleOpen</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'open'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//panel들 중에 transitionend가 작동된 패널에서 propertyname이 flex일 경우 open-active 클래스 토글</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">toggleActive</span>(<span class="hljs-params">e</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-built_in">console</span>.log(e.propertyName);</span><br><span class="line">  <span class="hljs-keyword">if</span>(e.propertyName.includes(<span class="hljs-string">'flex'</span>)) &#123;</span><br><span class="line">    <span class="hljs-keyword">this</span>.classList.toggle(<span class="hljs-string">'open-active'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//forEach 문</span></span><br><span class="line">PANELS.forEach(<span class="hljs-function"><span class="hljs-params">panel</span> =&gt;</span> panel.addEventListener(<span class="hljs-string">'click'</span>, toggleOpen));</span><br><span class="line">PANELS.forEach(<span class="hljs-function"><span class="hljs-params">panel</span> =&gt;</span> panel.addEventListener(<span class="hljs-string">'transitionend'</span>,toggleActive));</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2019/05/02/javascript/javascript30/js30-s04/" itemprop="url">JavaScript30_section4</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2019-05-02T00:44:53.000Z" itemprop="datePublished">5월 2 2019</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
-        </span>
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
-<h4 id="Array-Cardio-Day-1"><a href="#Array-Cardio-Day-1" class="headerlink" title="Array Cardio Day 1"></a>Array Cardio Day 1</h4><ol>
-<li><p>filter</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// filter - 주어진 조건을 통과하는 요소를 모아 새로운 배열로 반환(1500년대 출생)</span></span><br><span class="line"><span class="hljs-keyword">const</span> fiften = inventors.filter(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">inventor</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">if</span>(inventor.year &gt; <span class="hljs-number">1500</span> &amp;&amp; inventor.year &lt; <span class="hljs-number">1600</span>) &#123;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(fiften);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>map</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// map - 배열내의 모든요소 각각에 주어진 함수를 호출한 결과를 모아 새로운 배열 반환(first name과 last name 붙여서 호출)</span></span><br><span class="line"><span class="hljs-keyword">const</span> FULLNAME = inventors.map(<span class="hljs-function"><span class="hljs-params">inventor</span> =&gt;</span> <span class="hljs-string">`<span class="hljs-subst">$&#123;inventor.first&#125;</span> <span class="hljs-subst">$&#123;inventor.last&#125;</span>`</span>)</span><br><span class="line"><span class="hljs-built_in">console</span>.log(FULLNAME);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>sort</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// sort - 배열내에서 조건식에 따라 비교하고 0보다 작을경우와 0보다 클경우로 오는 순서 재배열</span></span><br><span class="line"><span class="hljs-keyword">const</span> ORDERED = inventors.sort(<span class="hljs-function">(<span class="hljs-params">a, b</span>) =&gt;</span> a.year &gt; b.year ? <span class="hljs-number">1</span> : <span class="hljs-number">-1</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.table(ORDERED);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>reduce</p>
-<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// reduce - 배열.reduce((누적값, 현잿값, 인덱스, 요소) =&gt; &#123; return 결과 &#125;, 초깃값);</span></span><br><span class="line"><span class="hljs-keyword">const</span> TOTALYERS = inventors.reduce(<span class="hljs-function">(<span class="hljs-params">total, inventor</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> total +  (inventor.passed - inventor.year);</span><br><span class="line">&#125;, <span class="hljs-number">0</span>);</span><br><span class="line"><span class="hljs-built_in">console</span>.log(TOTALYERS);</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     
