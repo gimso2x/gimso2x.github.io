@@ -122,6 +122,44 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2019/04/23/git/hexo_make_blog/" itemprop="url">Hexo로 github blog 만들기</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-04-23T01:00:00.000Z" itemprop="datePublished">4월 23 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/git/">git</a><span>></span><a class="article-category-link" href="/categories/git/hexo/">hexo</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <h2 id="Hexo-io-Hexo-공식-홈"><a href="#Hexo-io-Hexo-공식-홈" class="headerlink" title="Hexo.io - Hexo 공식 홈"></a><a href="http://hexo.io" target="_blank" rel="noopener">Hexo.io</a> - Hexo 공식 홈</h2><p><br></p>
+<h4 id="1-node-설치후-hexo-cli-설치"><a href="#1-node-설치후-hexo-cli-설치" class="headerlink" title="1. node 설치후 hexo-cli 설치"></a>1. node 설치후 hexo-cli 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h4 id="2-Hexo-설치할-폴더"><a href="#2-Hexo-설치할-폴더" class="headerlink" title="2. Hexo 설치할 폴더"></a>2. Hexo 설치할 폴더</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+<h4 id="3-Hexo-설치한-폴더로-이동-후-node-module-설치"><a href="#3-Hexo-설치한-폴더로-이동-후-node-module-설치" class="headerlink" title="3. Hexo 설치한 폴더로 이동 후 node_module 설치"></a>3. Hexo 설치한 폴더로 이동 후 node_module 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<h4 id="4-Hexo-Server로-가동하면-localhost-4000으로-로컬-구동"><a href="#4-Hexo-Server로-가동하면-localhost-4000으로-로컬-구동" class="headerlink" title="4. Hexo Server로 가동하면 localhost:4000으로 로컬 구동"></a>4. Hexo Server로 가동하면 localhost:4000으로 로컬 구동</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="5-github에서-username-github-io-라는-repository-생성-후-폴더-최상단-config-yml-내용-입력"><a href="#5-github에서-username-github-io-라는-repository-생성-후-폴더-최상단-config-yml-내용-입력" class="headerlink" title="5. github에서 {username}.github.io 라는 repository 생성 후 폴더 최상단 _config.yml 내용 입력"></a>5. github에서 {username}.github.io 라는 repository 생성 후 폴더 최상단 _config.yml 내용 입력</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Deployment</span></span><br><span class="line"><span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="hljs-built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/&#123;username&#125;/&#123;username&#125;.github.io</span><br><span class="line">  branch: master</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
+<h4 id="6-github-배포용-모듈-설치"><a href="#6-github-배포용-모듈-설치" class="headerlink" title="6. github 배포용 모듈 설치"></a>6. github 배포용 모듈 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<h4 id="7-git으로-deploy"><a href="#7-git으로-deploy" class="headerlink" title="7. git으로 deploy"></a>7. git으로 deploy</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2019/04/23/git/git_repository_make/" itemprop="url">git repository 만든 후, 로컬에서 연동</a>
         
     </h1>

@@ -122,6 +122,41 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
+            <a href="/2019/05/02/javascript/javascript30/js30-s06/" itemprop="url">JavaScript30_section6</a>
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-05-02T02:44:53.000Z" itemprop="datePublished">5월 2 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/javascript/">javascript</a><span>></span><a class="article-category-link" href="/categories/javascript/javascript30/">javascript30</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p><img src="https://res.cloudinary.com/wesbos/image/fetch/w_700,q_auto,f_auto/https://courses.wesbos.com/images/JS3-social-share.png" alt="javascript30"></p>
+<h4 id="Ajax-Type-Ahead"><a href="#Ajax-Type-Ahead" class="headerlink" title="Ajax Type Ahead"></a>Ajax Type Ahead</h4><ol>
+<li>script<figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//json 주소 endpoint에 담기</span></span><br><span class="line"><span class="hljs-keyword">const</span> endpoint =</span><br><span class="line">  <span class="hljs-string">"https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> cities = [];</span><br><span class="line"><span class="hljs-comment">//fetch api로 json data cities 배열에 넣기</span></span><br><span class="line">fetch(endpoint)</span><br><span class="line">  .then(<span class="hljs-function"><span class="hljs-params">blob</span> =&gt;</span> blob.json())</span><br><span class="line">  .then(<span class="hljs-function"><span class="hljs-params">data</span> =&gt;</span> cities.push(...data));</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// input에 입력된 단어 정규식으로 변환, 대소문자 관계없이(gi)</span></span><br><span class="line"><span class="hljs-comment">// cities 데이터중에 city와 매치되면 city를 state가 매치되면 state를 반환</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findMatches</span>(<span class="hljs-params">wordToMatch, cities</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> cities.filter(<span class="hljs-function"><span class="hljs-params">place</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(wordToMatch, <span class="hljs-string">"gi"</span>);</span><br><span class="line">    <span class="hljs-keyword">return</span> place.city.match(regex) || place.state.match(regex);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//x 인자 3자리마다 콤마 삽입</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">numberWithCommas</span>(<span class="hljs-params">x</span>) </span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> x.toString().replace(<span class="hljs-regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>, <span class="hljs-string">','</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">displayMatch</span>(<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">  <span class="hljs-comment">//findMatches 함수에서 매치되서 반환된 값</span></span><br><span class="line">  <span class="hljs-keyword">const</span> matchArray = findMatches(<span class="hljs-keyword">this</span>.value, cities);</span><br><span class="line">  <span class="hljs-comment">//반환된값 배열 map 돌려서 city, state에 각각 매치된 부분에 span.hl을 감싼다</span></span><br><span class="line">  <span class="hljs-keyword">const</span> html = matchArray.map(<span class="hljs-function"><span class="hljs-params">place</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">const</span> regex = <span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-keyword">this</span>.value, <span class="hljs-string">'gi'</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> cityname = place.city.replace(regex, <span class="hljs-string">`&lt;span class="hl"&gt;<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.value&#125;</span>&lt;/span&gt;`</span>);</span><br><span class="line">    <span class="hljs-keyword">const</span> statename = place.state.replace(regex, <span class="hljs-string">`&lt;span class="hl"&gt;<span class="hljs-subst">$&#123;<span class="hljs-keyword">this</span>.value&#125;</span>&lt;/span&gt;`</span>);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">//감싸고 li 부분 리턴</span></span><br><span class="line">    <span class="hljs-comment">//인구부분은 위에 정의한 함수로 3자리마다 , 추가</span></span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-string">`</span></span><br><span class="line"><span class="hljs-string">      &lt;li&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;span class="name"&gt;<span class="hljs-subst">$&#123;cityname&#125;</span>, <span class="hljs-subst">$&#123;statename&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="hljs-string">        &lt;span class="population"&gt;<span class="hljs-subst">$&#123;numberWithCommas(place.population)&#125;</span>&lt;/span&gt;</span></span><br><span class="line"><span class="hljs-string">      &lt;/li&gt;</span></span><br><span class="line"><span class="hljs-string">    `</span>;</span><br><span class="line">  &#125;).join(<span class="hljs-string">''</span>); <span class="hljs-comment">// map으로 나온 결과값들을 join으로 하나의 문자열로 변환</span></span><br><span class="line">  <span class="hljs-comment">// 클래스 suggestions 안에 html형식으로 넣는다</span></span><br><span class="line">  suggestions.innerHTML = html;</span><br><span class="line">  <span class="hljs-comment">// console.log(matchArray);</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">const</span> serchInput = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.search'</span>);</span><br><span class="line"><span class="hljs-keyword">const</span> suggestions = <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.suggestions'</span>);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//serchInput input 에 change, keyup이 작동될 때 displayMatch 함수 동작</span></span><br><span class="line">serchInput.addEventListener(<span class="hljs-string">'change'</span>, displayMatch);</span><br><span class="line">serchInput.addEventListener(<span class="hljs-string">'keyup'</span>, displayMatch);</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    
+    </div>
+    
+    
+</article>
+
+
+
+
+    
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
             <a href="/2019/05/02/javascript/javascript30/js30-s05/" itemprop="url">JavaScript30_section5</a>
         
     </h1>
@@ -559,44 +594,6 @@
 <p><br></p>
 <h4 id="ECMAScript-성장-과정-출처-Sencha"><a href="#ECMAScript-성장-과정-출처-Sencha" class="headerlink" title="ECMAScript 성장 과정 (출처 : Sencha)"></a>ECMAScript 성장 과정 (출처 : <a href="https://www.sencha.com/blog/ext-js-ecmascript-2015/" target="_blank" rel="noopener">Sencha</a>)</h4><p><img width="500" src="https://www.sencha.com/wp-content/uploads/2016/10/ecmascript2015-senchacon-img2.png" alt="ECMAScript 성장과정" title="ECMAScript 성장과정"></p>
 
-    
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-            <a href="/2019/04/23/git/hexo_make_blog/" itemprop="url">Hexo로 github blog 만들기</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2019-04-23T01:00:00.000Z" itemprop="datePublished">4월 23 2019</time>
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/git/">git</a><span>></span><a class="article-category-link" href="/categories/git/hexo/">hexo</a>
-        </span>
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
-        <h2 id="Hexo-io-Hexo-공식-홈"><a href="#Hexo-io-Hexo-공식-홈" class="headerlink" title="Hexo.io - Hexo 공식 홈"></a><a href="http://hexo.io" target="_blank" rel="noopener">Hexo.io</a> - Hexo 공식 홈</h2><p><br></p>
-<h4 id="1-node-설치후-hexo-cli-설치"><a href="#1-node-설치후-hexo-cli-설치" class="headerlink" title="1. node 설치후 hexo-cli 설치"></a>1. node 설치후 hexo-cli 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-<h4 id="2-Hexo-설치할-폴더"><a href="#2-Hexo-설치할-폴더" class="headerlink" title="2. Hexo 설치할 폴더"></a>2. Hexo 설치할 폴더</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
-<h4 id="3-Hexo-설치한-폴더로-이동-후-node-module-설치"><a href="#3-Hexo-설치한-폴더로-이동-후-node-module-설치" class="headerlink" title="3. Hexo 설치한 폴더로 이동 후 node_module 설치"></a>3. Hexo 설치한 폴더로 이동 후 node_module 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="hljs-built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<h4 id="4-Hexo-Server로-가동하면-localhost-4000으로-로컬-구동"><a href="#4-Hexo-Server로-가동하면-localhost-4000으로-로컬-구동" class="headerlink" title="4. Hexo Server로 가동하면 localhost:4000으로 로컬 구동"></a>4. Hexo Server로 가동하면 localhost:4000으로 로컬 구동</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<h4 id="5-github에서-username-github-io-라는-repository-생성-후-폴더-최상단-config-yml-내용-입력"><a href="#5-github에서-username-github-io-라는-repository-생성-후-폴더-최상단-config-yml-내용-입력" class="headerlink" title="5. github에서 {username}.github.io 라는 repository 생성 후 폴더 최상단 _config.yml 내용 입력"></a>5. github에서 {username}.github.io 라는 repository 생성 후 폴더 최상단 _config.yml 내용 입력</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Deployment</span></span><br><span class="line"><span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="hljs-built_in">type</span>: git</span><br><span class="line">  repo: https://github.com/&#123;username&#125;/&#123;username&#125;.github.io</span><br><span class="line">  branch: master</span><br><span class="line">  message: [message]</span><br></pre></td></tr></table></figure>
-<h4 id="6-github-배포용-모듈-설치"><a href="#6-github-배포용-모듈-설치" class="headerlink" title="6. github 배포용 모듈 설치"></a>6. github 배포용 모듈 설치</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<h4 id="7-git으로-deploy"><a href="#7-git으로-deploy" class="headerlink" title="7. git으로 deploy"></a>7. git으로 deploy</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
     
     </div>
     
