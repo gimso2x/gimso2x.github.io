@@ -26,6 +26,12 @@ const config = {
     defaultLocale: "ko",
     locales: ["ko"],
   },
+  scripts: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6635084557775234",
+      crossOrigin: "anonymous",
+    },
+  ],
 
   presets: [
     [
