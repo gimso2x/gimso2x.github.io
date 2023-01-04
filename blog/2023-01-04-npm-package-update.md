@@ -1,5 +1,5 @@
 ---
-slug: long-blog-post
+slug: npm-package-update
 title: npm 패키지 한번에 업데이트
 authors: gimso2x
 tags: [npm]
